@@ -51,4 +51,3 @@ class CommentViewSet(viewsets.ModelViewSet):
         if instance.author != self.request.user:
             raise PermissionDenied('Удаление чужого контента запрещено!')
         super().perform_destroy(instance)
-        
